@@ -8,7 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
   features="src/test/java/FeatureFiles",
-  glue="StepDefinations"
+  glue="StepDefinations",
+		  plugin = { "pretty", "html:target/cucumber-reports.html" }
        )
 public class TestRunner {
 
